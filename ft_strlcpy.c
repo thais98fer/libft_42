@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 17:48:37 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/25 14:41:10 by thfernan         ###   ########.fr       */
+/*   Created: 2025/07/25 15:01:54 by thfernan          #+#    #+#             */
+/*   Updated: 2025/07/25 18:43:18 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t count)
+size_t	ft_strlcpy(char *dest, const char *src, size_t length)
 {
-	char		*str;
-	const char	*source;
-	size_t		i;
+	size_t	count;
+	size_t	index;
 
-	str = (char *)dest;
-	source = (const char *)src;
-	i = 0;
-	while (i < count)
+	count = 0;
+	index = 0;
+	while (src[count] != '\0')
+		count++;
+	if (length == 0)
+		return (count);
+	while (src[index] != '\0' && index < length - 1)
 	{
-		str[i] = source[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	return (dest);
+	dest[index] = '\0';
+	return (count);
 }
-
-/*int	main(void)
-{
-	char	dest[9];
-	char	str[] = "Psyduck";
-	
-	ft_memcpy(dest, str, 8);
-	printf ("Dest = %s\n", dest);
-	return (0);
-}*/

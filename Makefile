@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+         #
+#    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/07/24 12:02:21 by thais.fer        ###   ########.fr        #
+#    Updated: 2025/07/25 19:04:00 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,11 @@ SRCS =	ft_isalpha.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memmove.c \
+		ft_strlcpy.c \
+		ft_strlcat.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strchr.c \
 
 AR = ar
 ARFLAGS = rcs
