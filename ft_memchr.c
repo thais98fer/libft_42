@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 19:03:21 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/26 17:20:48 by thfernan         ###   ########.fr       */
+/*   Created: 2025/07/26 16:44:12 by thfernan          #+#    #+#             */
+/*   Updated: 2025/07/26 17:20:21 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	while (*str)
+	const unsigned char	*ptr;
+
+	ptr = (const unsigned char *)str;
+	while (n--)
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (*ptr == (unsigned char)c)
+			return ((void *)ptr);
+		ptr++;
 	}
-	if ((char)c == '\0')
-		return ((char *)str);
 	return (NULL);
 }
 
 /*int	main(void)
 {
-	char	*string;
-	int		c;
-
-	string = "Hey, listening";
-	c = 'l';
-	printf("%s", ft_strchr(string, c));
-	return (0);
+	
 }*/

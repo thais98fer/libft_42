@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 19:03:21 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/26 17:20:48 by thfernan         ###   ########.fr       */
+/*   Created: 2025/07/26 18:44:15 by thfernan          #+#    #+#             */
+/*   Updated: 2025/07/26 20:20:09 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_atoi(const char *nptr)
 {
-	while (*str)
+	int	result;
+	int	sign;
+
+	result = 0;
+	sign = 1;
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
 	}
-	if ((char)c == '\0')
-		return ((char *)str);
-	return (NULL);
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		result = result * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (sign * result);
 }
 
 /*int	main(void)
 {
-	char	*string;
-	int		c;
-
-	string = "Hey, listening";
-	c = 'l';
-	printf("%s", ft_strchr(string, c));
+	char	str[] = "-42";
+	printf("%d\n", ft_atoi(str));
 	return (0);
 }*/
