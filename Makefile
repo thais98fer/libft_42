@@ -6,7 +6,7 @@
 #    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/07/25 19:04:00 by thfernan         ###   ########.fr        #
+#    Updated: 2025/07/26 20:21:14 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,6 @@ NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 CC = gcc
 
-
-OBJS = $(SRCS:.c=.o)
 SRCS =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -31,11 +29,21 @@ SRCS =	ft_isalpha.c \
 		ft_toupper.c \
 		ft_tolower.c \
 		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c \
+
+OBJS = $(SRCS:.c=.o)
 
 AR = ar
 ARFLAGS = rcs
 
-all = $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 		$(AR) $(ARFLAGS) $(NAME) $(OBJS)
@@ -49,6 +57,6 @@ clean:
 fclean:
 	rm -f $(NAME)
 
-re: fcleam all
+re: fclean all
 
 .PHONY: all clean fclean re

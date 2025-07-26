@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 19:03:21 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/26 17:20:48 by thfernan         ###   ########.fr       */
+/*   Created: 2025/07/26 17:13:57 by thfernan          #+#    #+#             */
+/*   Updated: 2025/07/26 17:22:37 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (*str)
+	const unsigned char	*p1;
+	const unsigned char	*p2;
+
+	p1 = (const unsigned char *)s1;
+	p2 = (const unsigned char *)s2;
+	while (n--)
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (*p1 != *p2)
+			return (*p1 - *p2);
+		p1++;
+		p2++;
 	}
-	if ((char)c == '\0')
-		return ((char *)str);
-	return (NULL);
-}
-
-/*int	main(void)
-{
-	char	*string;
-	int		c;
-
-	string = "Hey, listening";
-	c = 'l';
-	printf("%s", ft_strchr(string, c));
 	return (0);
-}*/
+}

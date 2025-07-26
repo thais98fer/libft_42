@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 19:03:21 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/26 17:20:48 by thfernan         ###   ########.fr       */
+/*   Created: 2025/07/26 16:13:28 by thfernan          #+#    #+#             */
+/*   Updated: 2025/07/26 18:19:16 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*str)
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (s1[i] == '\0')
+			return (0);
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)str);
-	return (NULL);
+	return (0);
 }
 
 /*int	main(void)
 {
-	char	*string;
-	int		c;
+	char	*s1;
+	char	*s2;
+	int		result;
 
-	string = "Hey, listening";
-	c = 'l';
-	printf("%s", ft_strchr(string, c));
+	s1 = "abcdef";
+	s2 = "a2cdef";
+	result = ft_strncmp(s1, s2, 4);
+	printf("%d\n", result);
 	return (0);
 }*/
