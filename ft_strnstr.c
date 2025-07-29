@@ -6,14 +6,11 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 17:26:48 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/26 18:41:51 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/29 17:19:14 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
-
-size_t	ft_strlen(const char *str);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
