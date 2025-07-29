@@ -6,13 +6,13 @@
 #    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/07/26 20:21:14 by thfernan         ###   ########.fr        #
+#    Updated: 2025/07/29 16:55:40 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
-CC = gcc
+CC = cc
 
 SRCS =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -37,6 +37,10 @@ SRCS =	ft_isalpha.c \
 		ft_atoi.c \
 		ft_calloc.c \
 		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
 
 OBJS = $(SRCS:.c=.o)
 
