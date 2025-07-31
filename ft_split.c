@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 13:53:49 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/29 17:18:17 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/30 10:39:06 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	add_word(char **copy, const char *s, int start, int length)
 	return (1);
 }
 
-int	fill_array(char **new_str, const char *s, char c)
+static int	fill_array(char **new_str, const char *s, char c)
 {
 	int	start;
 	int	i;
