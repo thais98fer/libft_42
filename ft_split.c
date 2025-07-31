@@ -6,13 +6,13 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 13:53:49 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/31 11:32:59 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/31 17:25:56 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-static int	count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	count;
 	int	in_word;
@@ -33,7 +33,7 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-static void	free_all(char **result, int i)
+static void	ft_free_all(char **result, int i)
 {
 	while (i > 0)
 	{
@@ -43,7 +43,7 @@ static void	free_all(char **result, int i)
 	free(result);
 }
 
-static int	add_word(char **copy, const char *s, int start, int length)
+static int	ft_add_word(char **copy, const char *s, int start, int length)
 {
 	*copy = ft_substr(s, start, length);
 	if (!*copy)
@@ -51,7 +51,7 @@ static int	add_word(char **copy, const char *s, int start, int length)
 	return (1);
 }
 
-static int	fill_array(char **new_str, const char *s, char c)
+static int	ft_fill_array(char **new_str, const char *s, char c)
 {
 	int	start;
 	int	i;
@@ -68,7 +68,7 @@ static int	fill_array(char **new_str, const char *s, char c)
 		if ((s[j] == c || s[j + 1] == '\0') && start >= 0)
 		{
 			len = j - start + (s[j] != c);
-			if (!add_word(&new_str[i], s, start, len))
+			if (!ft_add_word(&new_str[i], s, start, len))
 				return (0);
 			i++;
 			start = -1;
@@ -84,12 +84,12 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	out = ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	out = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *));
 	if (!out)
 		return (NULL);
-	if (!fill_array(out, s, c))
+	if (!ft_fill_array(out, s, c))
 	{
-		free_all(out, count_words(s, c));
+		ft_free_all(out, ft_count_words(s, c));
 		return (NULL);
 	}
 	return (out);

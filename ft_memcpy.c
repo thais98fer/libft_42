@@ -6,7 +6,7 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:48:37 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/31 11:32:45 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/31 17:34:35 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 	str = (char *)dest;
 	source = (const char *)src;
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < count)
 	{
 		str[i] = source[i];
