@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 13:53:49 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/30 10:39:06 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/07/31 11:32:59 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,15 +94,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (out);
 }
-
-/*int	main(void)
-{
-	char	**words = ft_split("  hello  world  42  ", ' ');
-	for (int i = 0; words[i]; i++)
-	{
-		printf("'%s'\n", words[i]);
-		free(words[i]);
-	}
-	free(words);
-	return (0);
-}*/

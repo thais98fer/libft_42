@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 09:39:12 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/30 11:09:16 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/07/31 11:34:59 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	size_t	size;
 	int		is_neg;
-	long 	long_nbr;
+	long	long_nbr;
 
 	if (n == 0)
 		return (ft_strdup("0"));
@@ -51,5 +51,5 @@ char	*ft_itoa(int n)
 	}
 	if (is_neg)
 		str[0] = '-';
-	return (str);	
+	return (str);
 }

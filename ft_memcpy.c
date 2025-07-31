@@ -6,7 +6,7 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:48:37 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/25 14:41:10 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/31 11:32:45 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 	}
 	return (dest);
 }
-
-/*int	main(void)
-{
-	char	dest[9];
-	char	str[] = "Psyduck";
-	
-	ft_memcpy(dest, str, 8);
-	printf ("Dest = %s\n", dest);
-	return (0);
-}*/

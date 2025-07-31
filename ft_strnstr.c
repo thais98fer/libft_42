@@ -6,7 +6,7 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 17:26:48 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/29 17:19:14 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/31 11:33:27 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*int main(void)
-{
-	const char *s1 = "hello world";
-	const char *s2 = "world";
-
-	char *found = ft_strnstr(s1, s2, 11);
-	if (found)
-		printf("Encontrado: %s\n", found);
-	else
-		printf("Não encontrado\n");
-	return (0);
-}*/

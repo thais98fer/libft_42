@@ -6,7 +6,7 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 17:56:18 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/19 17:43:03 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/31 11:32:50 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ void	*ft_memset(void *dest, int c, size_t count)
 	}
 	return ((void *)dest);
 }
-
-/*int	main(void)
-{
-	char	str[10];
-
-	str[9] = '\0';
-	ft_memset(str, 'A', 10);
-	printf("%s\n", str);
-	return (0);
-}*/

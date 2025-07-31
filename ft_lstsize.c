@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 16:12:26 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/30 16:20:38 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/07/31 11:35:53 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_lstsize(t_list *lst)
 	{
 		size++;
 		lst = lst->next;
-	} 
+	}
 	return (size);
 }

@@ -6,7 +6,7 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 14:03:36 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/19 15:11:13 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/07/31 11:32:10 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ void	ft_bzero(void *dest, size_t count)
 		i++;
 	}
 }
-
-/*int	main(void)
-{
-	char	str[10] = "123456789";
-	int	i;
-
-	ft_bzero(str, 5);
-	for (i = 0; i < 10; i++)
-	{
-		printf("str[%d] = %c\n", i, str[i]);
-	}
-	return (0);
-}*/
