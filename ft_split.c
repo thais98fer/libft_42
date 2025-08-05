@@ -6,13 +6,13 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 13:53:49 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/30 10:39:06 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/08/05 10:44:39 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-static int	count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	count;
 	int	in_word;
@@ -33,7 +33,7 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-static void	free_all(char **result, int i)
+static void	ft_free_all(char **result, int i)
 {
 	while (i > 0)
 	{
@@ -43,7 +43,7 @@ static void	free_all(char **result, int i)
 	free(result);
 }
 
-static int	add_word(char **copy, const char *s, int start, int length)
+static int	ft_add_word(char **copy, const char *s, int start, int length)
 {
 	*copy = ft_substr(s, start, length);
 	if (!*copy)
@@ -51,29 +51,29 @@ static int	add_word(char **copy, const char *s, int start, int length)
 	return (1);
 }
 
-static int	fill_array(char **new_str, const char *s, char c)
+static int	ft_fill_array(char **new_str, const char *s, char c)
 {
-	int	start;
-	int	i;
-	int	j;
-	int	len;
+	const char	*start;
+	const char	*ptr;
+	int			i;
+	int			len;
 
-	start = -1;
+	start = NULL;
+	ptr = s;
 	i = 0;
-	j = 0;
-	while (s[j])
+	while (*ptr)
 	{
-		if (s[j] != c && start < 0)
-			start = j;
-		if ((s[j] == c || s[j + 1] == '\0') && start >= 0)
+		if (*ptr != c && start == NULL)
+			start = ptr;
+		if ((*ptr == c || *(ptr + 1) == '\0') && start != NULL)
 		{
-			len = j - start + (s[j] != c);
-			if (!add_word(&new_str[i], s, start, len))
+			len = ptr - start + (*ptr != c);
+			if (!ft_add_word(&new_str[i], start, 0, len))
 				return (0);
 			i++;
-			start = -1;
+			start = NULL;
 		}
-		j++;
+		ptr++;
 	}
 	return (1);
 }
@@ -84,25 +84,13 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	out = ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	out = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *));
 	if (!out)
 		return (NULL);
-	if (!fill_array(out, s, c))
+	if (!ft_fill_array(out, s, c))
 	{
-		free_all(out, count_words(s, c));
+		ft_free_all(out, ft_count_words(s, c));
 		return (NULL);
 	}
 	return (out);
 }
-
-/*int	main(void)
-{
-	char	**words = ft_split("  hello  world  42  ", ' ');
-	for (int i = 0; words[i]; i++)
-	{
-		printf("'%s'\n", words[i]);
-		free(words[i]);
-	}
-	free(words);
-	return (0);
-}*/

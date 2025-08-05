@@ -6,7 +6,7 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:29:00 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/30 21:04:31 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/08/05 10:47:27 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdint.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

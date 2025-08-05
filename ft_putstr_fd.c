@@ -6,11 +6,11 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:44:31 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/30 11:56:00 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/08/05 10:19:45 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:12:10 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/30 11:25:01 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/08/05 10:49:00 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

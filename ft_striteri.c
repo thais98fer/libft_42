@@ -6,16 +6,16 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:28:01 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/30 11:31:37 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/08/05 10:20:01 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	while (s[i])
 	{

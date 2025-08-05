@@ -6,13 +6,15 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:33:35 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/30 11:34:59 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/08/05 10:19:30 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+		return ;
 	write(fd, &c, 1);
 }

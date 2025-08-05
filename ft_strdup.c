@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 10:05:08 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/07/29 17:18:54 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/08/05 10:19:56 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {

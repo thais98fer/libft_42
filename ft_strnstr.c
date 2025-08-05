@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 17:26:48 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/29 17:19:14 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/08/05 10:20:29 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -29,16 +29,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*int main(void)
-{
-	const char *s1 = "hello world";
-	const char *s2 = "world";
-
-	char *found = ft_strnstr(s1, s2, 11);
-	if (found)
-		printf("Encontrado: %s\n", found);
-	else
-		printf("Não encontrado\n");
-	return (0);
-}*/

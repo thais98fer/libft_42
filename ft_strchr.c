@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 19:03:21 by thfernan          #+#    #+#             */
-/*   Updated: 2025/07/26 17:20:48 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/08/05 10:19:52 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -24,14 +24,3 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	char	*string;
-	int		c;
-
-	string = "Hey, listening";
-	c = 'l';
-	printf("%s", ft_strchr(string, c));
-	return (0);
-}*/
