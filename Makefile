@@ -6,7 +6,7 @@
 #    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/07/31 17:23:34 by thfernan         ###   ########.fr        #
+#    Updated: 2025/08/01 10:11:52 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,16 +71,17 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-		$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: 
+		$(MAKE) OBJS="$(OBJS) $(BONUS_OBJS)" all
+		
 %.o: %.c
 		$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS) $(BONUS_OBJS)
+		rm -f $(OBJS) $(BONUS_OBJS)
 
-fclean:
-	rm -rf $(NAME)
+fclean: clean
+		rm -f $(NAME)
 
 re: fclean all
 
