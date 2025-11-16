@@ -6,7 +6,7 @@
 /*   By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:29:00 by thfernan          #+#    #+#             */
-/*   Updated: 2025/08/05 10:47:27 by thais.fer        ###   ########.fr       */
+/*   Updated: 2025/11/16 17:51:26 by thais.fer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 # include <stddef.h>
 # include <stdint.h>
 # include <unistd.h>
+
+# include "gnl/get_next_line.h"
+# include "gnl/get_next_line_bonus.h"
+# include "printf/ft_printf.h"
+# include "printf/ft_printf_bonus.h"
 
 typedef struct s_list
 {
