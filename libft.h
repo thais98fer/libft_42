@@ -18,9 +18,9 @@
 # include <stdint.h>
 # include <unistd.h>
 
-# include "gnl/get_next_line.h"
+//# include "gnl/get_next_line.h"
 # include "gnl/get_next_line_bonus.h"
-# include "printf/ft_printf.h"
+//# include "printf/ft_printf.h"
 # include "printf/ft_printf_bonus.h"
 
 typedef struct s_list
