@@ -6,7 +6,7 @@
 #    By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/11/17 09:20:16 by thais.fer        ###   ########.fr        #
+#    Updated: 2025/11/26 19:24:32 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ $(NAME): $(OBJS) $(GNL_BONUS_OBJS)
 
 clean:
 		@rm -f $(OBJS) $(GNL_BONUS_OBJS)
-		rm -f *.o
+		@rm -f *.o
 		@$(MAKE) clean -C $(PRINTF_DIR)
 
 fclean: clean
