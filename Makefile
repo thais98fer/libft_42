@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thais.fer <thais.fer@student.42.fr>        +#+  +:+       +#+         #
+#    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/11/26 19:24:32 by thfernan         ###   ########.fr        #
+#    Updated: 2025/11/27 14:32:12 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,15 +57,15 @@ all: $(NAME)
 $(NAME): $(OBJS) $(GNL_BONUS_OBJS)
 		$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(GNL_BONUS_OBJS)
 		
-		@echo "Compiling printf..."
+		echo "Compiling printf..."
 		@$(MAKE) -C $(PRINTF_DIR)
 	
-		@echo "Extracting and adding printf objects..."
+		echo "Extracting and adding printf objects..."
 		@ar -x $(PRINTF_DIR)/libftprintf.a
 		@$(AR) $(ARFLAGS) $(NAME) *.o
 		
 %.o: %.c
-		$(CC) $(FLAGS) -c $< -o $@
+		@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 		@rm -f $(OBJS) $(GNL_BONUS_OBJS)
