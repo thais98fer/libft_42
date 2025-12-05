@@ -6,11 +6,11 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 11:54:52 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/11/27 16:30:27 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/12/05 17:28:01 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 long long	ft_atol(const char *str)
 {
