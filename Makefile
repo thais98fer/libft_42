@@ -6,7 +6,7 @@
 #    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/11/27 14:32:12 by thfernan         ###   ########.fr        #
+#    Updated: 2025/12/16 15:35:59 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,28 +51,40 @@ GNL_BONUS_OBJS = $(GNL_BONUS_SRCS:.c=.o)
 #                              rules                              #
 #=================================================================#
 
+# Colors
+RESET = \033[0m
+RED = \033[31m
+GREEN = \033[32m
+YELLOW = \033[33m
+BLUE = \033[34m
+
 # This Makefile compile all bonuses, for separeted objetcs, use the code in Makefile_splitbonus.txt
 all: $(NAME)
+	@echo "$(GREEN)Libft ready$(RESET)"
 
 $(NAME): $(OBJS) $(GNL_BONUS_OBJS)
-		$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(GNL_BONUS_OBJS)
+		@echo "$(BLUE)Creating $(NAME)...$(RESET)"
+		@$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(GNL_BONUS_OBJS)
 		
-		echo "Compiling printf..."
+		@echo "$(YELLOW)Building printf...$(RESET)"
 		@$(MAKE) -C $(PRINTF_DIR)
-	
-		echo "Extracting and adding printf objects..."
+		
+		@echo "$(YELLOW)Merging printf objects into $(NAME)...$(RESET)"
 		@ar -x $(PRINTF_DIR)/libftprintf.a
 		@$(AR) $(ARFLAGS) $(NAME) *.o
 		
 %.o: %.c
+		@echo "$(YELLOW)Compiling $<$(RESET)"
 		@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
+		@echo "$(RED)Cleaning objects...$(RESET)"
 		@rm -f $(OBJS) $(GNL_BONUS_OBJS)
 		@rm -f *.o
 		@$(MAKE) clean -C $(PRINTF_DIR)
 
 fclean: clean
+		@echo "$(RED)Removing $(NAME)...$(RESET)"
 		@rm -f $(NAME)
 		@$(MAKE) fclean -C $(PRINTF_DIR)
 
