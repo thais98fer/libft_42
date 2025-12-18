@@ -62,19 +62,6 @@ int	ft_putnstr(char *s, int n)
 	return (count);
 }
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	length;
-
-	length = 0;
-	while (*str != '\0')
-	{
-		str++;
-		length++;
-	}
-	return (length);
-}
-
 int	ft_calc_padding_str(t_flags *spec, int len)
 {
 	int	pad;
