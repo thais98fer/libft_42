@@ -6,7 +6,7 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 11:54:52 by thais.fer         #+#    #+#             */
-/*   Updated: 2025/12/05 17:28:01 by thfernan         ###   ########.fr       */
+/*   Updated: 2025/12/18 17:32:51 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ long long	ft_atol(const char *str)
 	{
 		if (*str < '0' || *str > '9')
 			return (0);
+		if (result >= 2147483648 || result <= -2147483649)
+			return (5000000000000000000);
 		result = result * 10 + (*str - '0');
 		str++;
 	}
