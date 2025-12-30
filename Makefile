@@ -74,7 +74,7 @@ $(NAME): $(OBJS) $(GNL_BONUS_OBJS)
 		@$(AR) $(ARFLAGS) $(NAME) *.o
 		
 %.o: %.c
-		@echo "$(YELLOW)Compiling $<$(RESET)"
+#		@echo "$(YELLOW)Compiling $<$(RESET)"
 		@$(CC) $(FLAGS) -c $< -o $@
 
 clean:

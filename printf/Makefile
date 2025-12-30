@@ -44,7 +44,7 @@ $(NAME): $(OBJS)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 %.o: %.c
-	@echo "$(YELLOW)Compiling $<$(RESET)"
+#	@echo "$(YELLOW)Compiling $<$(RESET)"
 	@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
