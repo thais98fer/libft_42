@@ -6,37 +6,11 @@
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 10:32:21 by thfernan          #+#    #+#             */
-/*   Updated: 2025/09/12 10:32:38 by thfernan         ###   ########.fr       */
+/*   Updated: 2026/01/04 17:57:37 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-
-char	*ft_strchr(const char *str, int c)
-{
-	while (*str)
-	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
-	}
-	if ((char)c == '\0')
-		return ((char *)str);
-	return (NULL);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	length;
-
-	length = 0;
-	while (*str != '\0')
-	{
-		str++;
-		length++;
-	}
-	return (length);
-}
 
 size_t	ft_strlcpy_gnl(char *dest, const char *src, size_t length)
 {
@@ -57,20 +31,6 @@ size_t	ft_strlcpy_gnl(char *dest, const char *src, size_t length)
 	while (src[i])
 		i++;
 	return (i);
-}
-
-char	*ft_strdup(const char *src)
-{
-	size_t	length;
-	char	*copy;
-
-	length = ft_strlen(src);
-	copy = malloc(sizeof(char) * (length + 1));
-	if (!copy)
-		return (NULL);
-	else
-		ft_strlcpy_gnl(copy, src, length + 1);
-	return (copy);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

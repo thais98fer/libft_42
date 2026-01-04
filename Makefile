@@ -6,7 +6,7 @@
 #    By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 14:08:25 by thfernan          #+#    #+#              #
-#    Updated: 2025/12/16 15:35:59 by thfernan         ###   ########.fr        #
+#    Updated: 2026/01/03 18:16:54 by thfernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ BLUE = \033[34m
 
 # This Makefile compile all bonuses, for separeted objetcs, use the code in Makefile_splitbonus.txt
 all: $(NAME)
-	@echo "$(GREEN)Libft ready$(RESET)"
+	@echo "$(GREEN)	-> Libft ready$(RESET)"
 
 $(NAME): $(OBJS) $(GNL_BONUS_OBJS)
 		@echo "$(BLUE)Creating $(NAME)...$(RESET)"
@@ -78,7 +78,6 @@ $(NAME): $(OBJS) $(GNL_BONUS_OBJS)
 		@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-		@echo "$(RED)Cleaning objects...$(RESET)"
 		@rm -f $(OBJS) $(GNL_BONUS_OBJS)
 		@rm -f *.o
 		@$(MAKE) clean -C $(PRINTF_DIR)
