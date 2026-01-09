@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_array.c                                    :+:      :+:    :+:   */
+/*   ft_exit_error.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfernan <thfernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 11:58:28 by thfernan          #+#    #+#             */
-/*   Updated: 2026/01/08 14:45:35 by thfernan         ###   ########.fr       */
+/*   Created: 2026/01/08 14:21:06 by thfernan          #+#    #+#             */
+/*   Updated: 2026/01/08 15:05:55 by thfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_array(char **array)
+void	ft_exit_error(char *message)
 {
-	int	i;
-
-	if (!array)
-		return ;
-	i = 0;
-	while (array[i])
-	{
-		free(array[i]);
-		i++;
-	}
-	free(array);
+	ft_printf("%s\n", message);
+	exit(1);
 }
